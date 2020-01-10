@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> Изучаю JS </title>
+	<script type="text/javascript" href="JS.js"></script>
+</head>
+<body>
+	<script type = "text/javascript">
+	//Methods
+	searchByName();
+	getBiggestAge();
+	
+	//A method that displays information about the requested person
+	function searchByName () {
+	
+	
+	var johny_walker = new Array(1995, 12, 17);
+	var andrew = new Array(2001, 10, 29);
+	
+	//Name Request
+	var person = prompt("Please, enter name :)");
+	
+	//Next check for entering a name
+	if (person == "Johny"){
+		for (var i = 0; i < johny_walker.length; i++){
+			document.write(johny_walker[i]);
+				if (i != 2){
+					document.write("-");
+			}
+		}
+	}
+	
+	else if (person == "Andrew"){
+		for (var i = 0; i < andrew.length; i++){
+			document.write(andrew[i]);
+				if (i != 2){
+					document.write("-");
+			}
+		}
+	}
+	
+	else { 
+		document.write("Please, reboot page and enter correct name (Johny or Andrew)");
+	}
+	}
+	
+	//The oldest person search method
+	function getBiggestAge () {
+		confirm("Want to know who is the oldest?");
+		
+		var johny_walker = new Array(1995, 12, 17);
+		var andrew = new Array(2001, 10, 29);
+		var oldest = 0;
+		var check = 0;
+		
+		/*Summation of all indicators in the array. 
+		The oldest person should have a lower indicator. */
+		for (var i = 0; i < 3; i++){
+			oldest = oldest + johny_walker[i];
+			check = check + andrew[i];
+		}
+		
+		//Output result
+		if (oldest < check) {
+			document.write("<br> Johny is oldest man");
+		}
+		
+		else {
+			document.write("<br> Andrew is oldest man");
+		}
+	}
+	</script>
+</body>
+<html>
