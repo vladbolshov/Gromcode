@@ -1,0 +1,73 @@
+package com.company;
+import java.util.Scanner;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        searchByName();
+        getBiggestAge();
+    }
+
+    //The requested array output method
+    public static void searchByName() {
+        //Arrays
+        int[] johyWalker = new int[]{1995, 12, 17};
+        int[] andrew = new int[]{2001, 10, 29};
+
+        //Available name pool and scanner variable
+        String name1 = new String("Johny");
+        String name2 = new String("Andrew");
+        String check = new String("Check");
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Name: ");
+        check = in.nextLine();
+
+        //If appropriate, displays array Andrew
+        if (check.equals(name2)) {
+            for (int i = 0; i < 3; i++) {
+                System.out.print(andrew[i] + " ");
+            }
+        }
+
+        //In the case of matching strings, an array johyWalker
+        else if (check.equals(name1)) {
+            for (int i = 0; i < 3; i++) {
+                System.out.print(johyWalker[i] + " ");
+            }
+        }
+        //If there is no match, it asks you to enter the correct name
+        else {
+            System.out.println("Please, enter correct name!");
+        }
+    }
+
+    //The oldest object search method
+    public static void getBiggestAge(){
+
+        //Arrays
+        int[] johyWalker = new int[]{1995, 12, 17};
+        int[] andrew = new int[]{2001, 10, 29};
+
+        //Variables for storing age
+        int first = 0;
+        int second = 0;
+
+        //Loop to sum array
+        for (int b = 0; b < 3; b++){
+            first = first + johyWalker[b];
+            second = second + andrew[b];
+        }
+
+        //Text output with a positive condition
+        if (first > second){
+            System.out.println("Andrew Walker is oldest man :(");
+        }
+
+        //Text output under negative condition
+        else {
+            System.out.println("Johny Walker is oldest man :(");
+        }
+    }
+}
