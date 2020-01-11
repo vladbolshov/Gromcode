@@ -13,35 +13,20 @@
 	
 	//A method that displays information about the requested person
 	function searchByName () {
+		var data = new Array("Johny Walker", 1995, 12, 17, "Andrew", 2001, 10, 29);
+
+		//Name Request
+		var person = prompt("Please, enter name :)");
+
+		var searched = data.indexOf(person, 0);
 	
-	
-	var johny_walker = new Array(1995, 12, 17);
-	var andrew = new Array(2001, 10, 29);
-	
-	//Name Request
-	var person = prompt("Please, enter name :)");
-	
-	//Next check for entering a name
-	if (person == "Johny"){
-		for (var i = 0; i < johny_walker.length; i++){
-			document.write(johny_walker[i]);
-				if (i != 2){
-					document.write("-");
+		for (var i = 0; i <= 3; i++){
+			if (searched == -1){
+				document.write("Incorrect name");
+				break;
 			}
-		}
-	}
-	
-	else if (person == "Andrew"){
-		for (var i = 0; i < andrew.length; i++){
-			document.write(andrew[i]);
-				if (i != 2){
-					document.write("-");
-			}
-		}
-	}
-	
-	else { 
-		document.write("Please, reboot page and enter correct name (Johny or Andrew)");
+			document.write(data[searched] + " ");
+			searched++;
 	}
 	}
 	
