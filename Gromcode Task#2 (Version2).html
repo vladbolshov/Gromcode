@@ -9,12 +9,12 @@
 	<script type = "text/javascript">
 		
 		var data = 
-			[
-			{"name":"Jonny"},
-			{"birthDate":"1995-12-17"},
-			{"name":"Andrew"},
-			{"birthDate":"2001-10-29"}
-			];
+			[{
+			"name":"Jonny",
+			"birthDate":"1995-12-17"},
+			{
+			"name":"Andrew",
+			"birthDate":"2001-10-29"}];
 
 			var person = prompt("Enter name");
 
@@ -22,7 +22,6 @@
 				var search = data[i]["name"];
 				if (search == person) {
 					document.write(search + " ");
-					i++;
 					search = data[i]["birthDate"];
 					document.write(search);
 					break;
